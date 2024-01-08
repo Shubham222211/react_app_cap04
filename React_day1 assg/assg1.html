@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Intro</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+      // let elem = React.createElement("h1", { id: "heading" }, "hello world");
+      // let elem2=React.createElement("h1",{id:"elem2"},"hello world2")
+      // let img1=React.createElement("img",{src:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmChM1Ra6xJMtkYLBMPgllFPyCg63L2yanjw&usqp=CAU"})
+
+      // let elem3=React.createElement("h1",{id:"parent"},[elem,elem2,img1])
+
+
+
+      // const reactroot = ReactDOM.createRoot(document.getElementById("root"));
+      // reactroot.render(elem3);
+
+      let q1=React.createElement("h3",{id:"q1"},"What is react?")
+      let ans1=React.createElement("p",{id:"ans1"},"Ans: React is a JavaScript library for building user interfaces. It lets developers create reusable UI components, making it efficient to build interactive and dynamic web applications with a declarative approach.")
+
+      let q2=React.createElement("h4",{id:"q2"},"Who made React?")
+      let ans2=React.createElement("p",{id:"ans2"},"Ans: React was developed by Facebook. It was created by Jordan Walke, a software engineer at Facebook")
+
+      let q3=React.createElement("h4",{id:"q3"},"What is Babel?")
+      let ans3=React.createElement("p",{id:"ans3"},"Ans: Babel is a JavaScript compiler that translates modern ECMAScript (ES6 and later) code into an older version (usually ES5) to ensure compatibility across different browsers and environments.")
+
+      let q4=React.createElement("h4",{id:"q4"},"How does Babel convert html code in React into valid code?")
+      let ans4=React.createElement("p",{id:"ans4"},"Ans: Babel doesn't directly convert HTML code into React code. Babel primarily deals with JavaScript code, and React code is typically written using JSX (JavaScript XML). JSX is a syntax extension that looks similar to HTML but is used within JavaScript to describe React elements.")
+
+      let q5=React.createElement("h4",{id:"q5"},"What is ReactDOM used for? Write an example?")
+      let ans5=React.createElement("p",{id:"ans5"},"Ans: ReactDOM is a package in React used for interacting with the DOM (Document Object Model). It provides methods for rendering React components into the DOM. "  )
+
+      let q6=React.createElement("h4",{id:"q6"},"What are the packages that you need to import for react to work with?")
+      let ans6=React.createElement("p",{id:"ans6"},"Ans: There are mainly two important packages that you need to import for react this is (1)->import React from react   and 2ns is -> import ReactDOM from 'react-dom'  a part from these user can also use additional packages according to users need."  )
+
+      let q7=React.createElement("h4",{id:"q7"},"How do you add react to a web application?")
+      let ans7=React.createElement("p",{id:"ans7"},"Ans:By install Node.js and npm (Node Package Manager) on your machine.Than after Open a terminal or command prompt Run the following command to create a new React application using Create React App (a tool maintained by Facebook for quickly setting up a new React project):   npx create-react-app my-react-app    where Replace my-react-app with your preferred project name." )
+
+      let q8=React.createElement("h4",{id:"q8"},"What is React.createElement?")
+      let ans8=React.createElement("p",{id:"ans8"},"Ans: It returns a React element that can be rendered to the DOM. This function is commonly used when writing JSX (JavaScript XML), a syntax extension for JavaScript often used with React. JSX gets transpiled into calls to React.createElement during the build process.")
+
+      let q9=React.createElement("h4",{id:"q9"},"What are the three properties that createElement accept? ")
+      let ans9=React.createElement("p",{id:"ans9"},"Ans: Type (or tag): The type of the element, which can be a string representing an HTML tag (e.g., 'div') or a reference to a React component (e.g., a function or a class).Props (or properties): An optional object containing properties or attributes for the element. These properties configure the behavior or appearance of the element.Children: Any subsequent arguments after the props object represent the children of the element. Children can be other React elements, strings, or other values")
+
+      let q10=React.createElement("h4",{id:"q10"},"What is the meaning of render and root?")
+      let ans10=React.createElement("p",{id:"ans10"},"Ans: render involves displaying React components, and root is the entry point or target DOM node where the React application is rendered")
+
+
+
+
+
+
+      let ans=React.createElement("div",{id:"cont"},[q1],[ans1],[q2],[ans2],[q3],[ans3],[q4],[ans4],[q5 ],[ans5],[q6],[ans6],[q7],[ans7],[q8],[ans8],[q9],[ans9],[q10],[ans10])
+
+      let q1display=ReactDOM.createRoot(document.getElementById("root"))
+
+      q1display.render(ans)
+    </script>
+  </body>
+</html>

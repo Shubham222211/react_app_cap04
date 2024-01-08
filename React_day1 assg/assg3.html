@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            justify-content: space-around;
+            color:antiquewhite
+        }
+    </style>
+</head>
+<body>
+    <div id="parent"></div>
+</body>
+
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <script>
+
+// const parentBox = React.createElement('div', { className: 'parent-box' },
+//   React.createElement('div', { className: 'child-box', key: 'child1', style: { backgroundColor: 'red' } }, 'Child 1'),
+//   React.createElement('div', { className: 'child-box', key: 'child2', style: { backgroundColor: 'green' } }, 'Child 2'),
+//   React.createElement('div', { className: 'child-box', key: 'child3', style: { backgroundColor: 'blue' } }, 'Child 3')
+// );
+// const rootElement = document.getElementById('parent');
+// ReactDOM.render(parentBox, rootElement);
+
+
+// let parent=React.createElement("div",{id:"first",style:{border:"1px solid black",height:"120px",width:"800px"},},
+//             React.createElement("div"),{id:"child1",style:{border:"1 px solid black",height:"80px",width:"80px"}},
+//             React.createElement("div"),{id:"child2",style:{border:"1 px solid black",height:"80px",width:"80px"}})
+
+
+
+
+// let disp=ReactDOM.createRoot(document.getElementById("parent"))
+// disp.render(parent)
+
+
+let parent = React.createElement( "div",{id: "first",style: { border: "1px solid black", height: "120px",width:"800px",display:"flex" ,justifyContent: "space-evenly",marginTop:"200px",marginLeft:"200px",backgroundColor:"antiquewhite"},},"Parent",
+  React.createElement("div", { id: "child1", style: { border: "1px solid black", height: "80px", width: "80px",backgroundColor:"Red" ,marginTop:"16.5px"},},"1"),
+  React.createElement("div", { id: "child2", style: { border: "1px solid black", height: "80px", width: "80px",backgroundColor:"Yellow",marginTop:"16.5px" } },"2"),
+  React.createElement("div", { id: "child2", style: { border: "1px solid black", height: "80px", width: "80px",backgroundColor:"green",marginTop:"16.5px" } },"3"),
+  React.createElement("div", { id: "child2", style: { border: "1px solid black", height: "80px", width: "80px",backgroundColor:"Purple",marginTop:"16.5px" } },"4")
+
+);
+
+let disp = ReactDOM.createRoot(document.getElementById("parent"));
+disp.render(parent);
+
+
+    </script>
+
+
+
+</html>
